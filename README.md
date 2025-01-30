@@ -45,3 +45,25 @@ This script includes an **advanced AMSI bypass** that:
 ### **🔹 Basic Execution (No Arguments)**
 ```powershell
 .\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123"
+```
+
+---
+
+## 🚀 Execution with Arguments
+If the decrypted binary **requires arguments**, you can pass them like this:
+
+```powershell
+.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123" -argument '"LogonEvents 30"'
+```
+
+---
+
+### **📌 Execution with Multiple Arguments**
+```md
+## 🚀 Execution with Multiple Arguments
+If the binary **accepts multiple arguments**, pass them like this:
+
+```powershell
+.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123" -argument "arg1" -argument2 "arg2" -argument3 "arg3"
+```
+
