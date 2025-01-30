@@ -18,7 +18,7 @@ This script encrypts a compiled C# executable using **AES-256 encryption** with 
 
 ### 🔹 Usage:
 ```powershell
-.\Encrypt-Binary.ps1 -InputFile "SharpEDRchecker.exe" -Password "StrongPassword123" -OutputFile "SharpEDRchecker.enc"
+.\Encrypt-Binary.ps1 -InputFile "Seatbelt.exe" -Password "StrongPassword123" -OutputFile "Seatbelt.enc"
 ```
 
 # 🔓 Decrypt & Execute Reflectively (with AMSI Bypass)
@@ -44,7 +44,7 @@ This script includes an **advanced AMSI bypass** that:
 ## **🚀 Usage**
 ### **🔹 Basic Execution (No Arguments)**
 ```powershell
-.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123"
+.\Decrypt-And-Execute-Reflective.ps1 -location "Seatbelt.enc" -password "StrongPassword123"
 ```
 
 ---
@@ -53,7 +53,7 @@ This script includes an **advanced AMSI bypass** that:
 If the decrypted binary **requires arguments**, you can pass them like this:
 
 ```powershell
-.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123" -argument '"LogonEvents 30"'
+.\Decrypt-And-Execute-Reflective.ps1 -location "Seatbelt.enc" -password "StrongPassword123" -argument '"LogonEvents 30"'
 ```
 
 ---
@@ -64,6 +64,6 @@ If the decrypted binary **requires arguments**, you can pass them like this:
 If the binary **accepts multiple arguments**, pass them like this:
 
 ```powershell
-.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123" -argument "arg1" -argument2 "arg2" -argument3 "arg3"
+.\Decrypt-And-Execute-Reflective.ps1 -location "Seatbelt.enc" -password "StrongPassword123" -argument "arg1" -argument2 "arg2" -argument3 "arg3"
 ```
 
