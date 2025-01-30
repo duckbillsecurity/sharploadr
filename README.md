@@ -21,3 +21,27 @@ This script encrypts a compiled C# executable using **AES-256 encryption** with 
 .\Encrypt-Binary.ps1 -InputFile "SharpEDRchecker.exe" -Password "StrongPassword123" -OutputFile "SharpEDRchecker.enc"
 ```
 
+# 🔓 Decrypt & Execute Reflectively (with AMSI Bypass)
+
+## **Overview**
+`Decrypt-And-Execute-Reflective.ps1` is a **PowerShell script** that:
+✅ **Bypasses AMSI** to prevent detection.  
+✅ **Decrypts an AES-256 encrypted binary in memory** without writing to disk.  
+✅ **Loads the decrypted assembly reflectively** and executes it **directly from memory**.  
+✅ **Supports command-line arguments** for passing parameters to the decrypted executable.
+
+---
+
+## **📌 AMSI Bypass**
+This script includes an **advanced AMSI bypass** that:
+- **Dynamically loads `amsi.dll`**.
+- **Uses `GetProcAddress` to locate `AmsiScanBuffer`**.
+- **Patches the function in memory** using `VirtualProtect` & `Marshal.Copy()`.
+- **Prevents AMSI from scanning** and detecting the execution.
+
+---
+
+## **🚀 Usage**
+### **🔹 Basic Execution (No Arguments)**
+```powershell
+.\Decrypt-And-Execute-Reflective.ps1 -location "SharpEDRchecker.enc" -password "StrongPassword123"
