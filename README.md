@@ -59,7 +59,7 @@ If the decrypted binary **requires arguments**, you can pass them like this:
 ---
 
 ### **📌 Execution with Multiple Arguments**
-```md
+
 ## 🚀 Execution with Multiple Arguments
 If the binary **accepts multiple arguments**, pass them like this:
 
